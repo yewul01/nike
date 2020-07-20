@@ -1,0 +1,106 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Play:wght@400;700&display=swap');
+
+/*    Reset CSS  */
+* { margin:0;  padding:0; }
+ol,ul { list-style: none; }
+a { text-decoration:none; color: inherit}
+img { border:0; vertical-align: middle; }
+body, html { 
+    width: 100%; 
+    height: 100%; 
+    position: fixed; 
+    background: #111;
+}
+.vid { 
+    width: 100%; 
+    height: 100%; 
+    position: fixed;
+    top: 0; 
+    left: 0;
+}
+.vid video { 
+    min-width: 100%; 
+    min-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+.header { 
+    width: 700px; 
+    height: 100%; 
+    position: fixed; 
+    left: -420px;
+    background: linear-gradient(-45deg, #e6fc55,#b9fb05,#97e031);
+    transform: skew(-40deg);
+}
+
+h1 { 
+    position: absolute; 
+    top: 40px; 
+    right: 150px; 
+    transform: skew(40deg);
+}
+h1 img { width: 280px; }
+.nav { 
+    position: absolute; 
+    top:300px; 
+    right: 0;
+    width: 220px; 
+}
+
+.nav .depth1 > li { 
+    height: 50px; 
+    line-height: 50px;
+    font: bold 18px/3 'Play'; 
+    color: #222;
+    text-align: right;
+    position: relative;
+    transition: all 0.3s; 
+}
+.nav .depth1 > li:hover { color: #fff; background: #000; }
+.nav .depth1 > li:first-child { background: #000; color: #fff;}
+.nav .depth1 > li > a { 
+    display: block; 
+    padding-right: 40px; 
+}    
+.nav .depth1 > li > a  span { transform: skew(40deg); display: inline-block;}
+.nav .depth1 > li > a  span > i { margin-right: 10px; }
+.nav .depth2 { 
+    position: absolute; 
+    top: 0; 
+    left: 0;
+    width: 80%;
+    color: #fff;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.5s;
+}
+.nav .depth1 > li:first-child .depth2 { left: 95%; opacity: 0.7; }
+.nav .depth1 > li:hover .depth2 { 
+    opacity: 1;
+    left: 95%; 
+}
+.nav .depth2 > li { 
+    background: #111;
+    border-bottom: 1px solid #b9fb05;
+    margin-bottom: 3px;
+    font: bold 16px/2.5 'arial';
+} 
+.nav .depth2 > li:hover { background: #b9fb05; color: #222; }
+.nav .depth2 > li:first-child:hover {
+    background: #444;
+    color: #333;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+.nav .depth2 > li > a { display: block; }
+.nav .depth2 > li > a > span { 
+    transform: skew(40deg); 
+    display: inline-block; 
+}
+
+
+
+
